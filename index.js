@@ -7,8 +7,9 @@ const tasksRoute = require("./routes/tasksRoutes");
 
 
 const server=express();
-server.use(express.json());
 server.use(cors());
+server.use(express.json());
+
 server.use(userRoute);
 server.use("/tasks",tasksRoute);
 
